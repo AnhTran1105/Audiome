@@ -1,4 +1,5 @@
 import SongCard from "@/components/SongCard";
+import SongList from "@/components/SongList";
 
 export default function Dashboard() {
   return (
@@ -10,12 +11,13 @@ export default function Dashboard() {
           <button className="text-primary text-sm">See all</button>
         </div>
         <ul role="list" className="space-y-4">
+          {/* <SongCard />
           <SongCard />
           <SongCard />
           <SongCard />
           <SongCard />
-          <SongCard />
-          <SongCard />
+          <SongCard /> */}
+          <SongList />
         </ul>
       </div>
     </div>
