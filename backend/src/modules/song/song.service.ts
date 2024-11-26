@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Song } from './entities/song.entity';
+import { CreateSongDto } from './dto/create-song.dto';
 
 @Injectable()
 export class SongService {
@@ -18,12 +19,12 @@ export class SongService {
     return this.songRepository.findOne({ where: { id } });
   }
 
-  create(song: Partial<Song>): Promise<Song> {
-    const newSong = this.songRepository.create(song);
-    return this.songRepository.save(newSong);
-  }
-
   async remove(id: number): Promise<void> {
     await this.songRepository.delete(id);
+  }
+
+  async create(createSongDto: CreateSongDto): Promise<Song> {
+    const song = this.songRepository.create(createSongDto);
+    return this.songRepository.save(song);
   }
 }

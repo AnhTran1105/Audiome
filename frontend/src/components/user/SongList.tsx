@@ -1,4 +1,4 @@
-import { useSongs } from "../hooks/useSongs";
+import { useSongs } from "../../hooks/useSongs";
 
 function SongList() {
   const { data: songs, isLoading, error } = useSongs();

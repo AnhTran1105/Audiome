@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.svg";
+import logo from "@/assets/logo.svg";
 import NavLinks from "./NavLinks";
-import PlaylistLinks from "./PlaylistLinks";
-import { Plus } from "lucide-react";
 
 export default function Sidebar() {
   return (
@@ -11,11 +9,6 @@ export default function Sidebar() {
         <img src={logo} className="" alt="audiome-logo" />
       </Link>
       <NavLinks />
-      <PlaylistLinks />
-      <button className="flex grow justify-start px-6 items-center gap-2 text-sm hover:text-primary transition">
-        Create new playlist
-        <Plus size={20} />
-      </button>
     </aside>
   );
 }

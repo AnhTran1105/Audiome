@@ -1,7 +1,6 @@
-import SongCard from "@/components/SongCard";
-import SongList from "@/components/SongList";
+import SongList from "@/components/user/SongList";
 
-export default function Dashboard() {
+export default function AdminDashboard() {
   return (
     <div className="flex gap-6">
       <div className="grow"></div>
